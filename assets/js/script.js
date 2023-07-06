@@ -30,7 +30,7 @@ var words = [
 // The init function is called when the page loads
 function init() {
   getWins();
-  getlosses();
+  getLosses();
 }
 
 // The startGame function is called when the start button is clicked
@@ -114,8 +114,19 @@ function getWins() {
   win.textContent = winCounter;
 }
 
-function getlosses() {
+function getLosses() {
   // TODO: Add logic here
+  // Get stored value from client storage, if it exists
+  var storedLosses = localStorage.getItem("lossCount");
+  // If stored value doesn't exist, set counter to 0
+  if (storedLosses === null) {
+    loseCounter = 0;
+  } else {
+    // If a value is retrieved from client storage set the loseCounter to that value
+    loseCounter = storedLosses;
+  }
+  //Render win count to page
+  lose.textContent = loseCounter;
 }
 
 function checkWin() {
