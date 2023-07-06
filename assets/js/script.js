@@ -91,6 +91,10 @@ function setWins() {
 // Updates lose count on screen and sets lose count to client storage
 function setLosses() {
   // TODO: Add logic here
+  wordBlank.textContent = "You win!";
+  winCounter++;
+  startButton.disabled = false;
+  setWins();
 }
 
 // These functions are used by init
