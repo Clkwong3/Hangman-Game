@@ -67,6 +67,16 @@ function startTimer() {
     // TODO:  Add logic for the timer here
     timerCount--;
     timerElement.textContent = timerCount;
+
+    if (timerCount === 0) {
+      clearInterval(timer);
+      loseGame();
+    }
+
+    if (isWin) {
+      clearInterval(timer);
+      winGame();
+    }
   }, 1000);
 }
 
