@@ -54,6 +54,10 @@ function winGame() {
 // The loseGame function is called when timer reaches 0
 function loseGame() {
   // TODO:  Add logic for loseGame()
+  wordBlank.textContent = "YOU LOSE!!!";
+  loseCounter++;
+  startButton.disabled = false;
+  setLosses();
 }
 
 // The setTimer function starts and stops the timer and triggers winGame() and loseGame()
