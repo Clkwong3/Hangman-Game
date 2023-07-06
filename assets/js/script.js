@@ -192,3 +192,9 @@ init();
 
 // Bonus: Add reset button
 // TODO:  Add reset button
+document.querySelector(".reset-button").addEventListener("click", function () {
+  winCounter = 0;
+  loseCounter = 0;
+  setWins();
+  setLosses();
+});
