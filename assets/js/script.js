@@ -82,6 +82,10 @@ function renderBlanks() {
 // Updates win count on screen and sets win count to client storage
 function setWins() {
   // TODO: Add logic here
+  wordBlank.textContent = "You lose!";
+  loseCounter++;
+  startButton.disabled = false;
+  setLosses();
 }
 
 // Updates lose count on screen and sets lose count to client storage
