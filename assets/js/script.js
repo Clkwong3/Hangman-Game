@@ -65,6 +65,8 @@ function startTimer() {
   // Sets timer
   timer = setInterval(function () {
     // TODO:  Add logic for the timer here
+    timerCount--;
+    timerElement.textContent = timerCount;
   }, 1000);
 }
 
