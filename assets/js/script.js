@@ -179,6 +179,8 @@ document.addEventListener("keydown", function (event) {
   // Test if key pushed is letter
   if (alphabetNumericCharacters.includes(key)) {
     // TODO: Add logic here
+    checkLetters(key);
+    checkWin();
   }
 });
 
